@@ -36,7 +36,7 @@ const Topbar = () => {
           <InputBase placeholder='Recherche...' onChange={handleChange} />
         </Search>
 
-        <Box>
+        <Box sx={{ display: { sm: 'block', lg: 'none' } }}>
           <Menu
             fontSize='large'
             onClick={() => dispatch(setMobileMenu(true))}
