@@ -54,7 +54,7 @@ const ItemContent = () => {
     content = (
       <>
         <DialogTitle sx={{ fontSize: 25, textTransform: 'uppercase' }}>
-          {officine.pharmacie}
+          Pharmacie {officine.pharmacie}
         </DialogTitle>
         <DialogContent>
           <DialogContentText p={5}>
