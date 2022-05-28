@@ -1,10 +1,10 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL
+const BASE_URL = process.env.REACT_APP_BASE_URL
 
-export const getSingleMedicalTerm = createAsyncThunk('medicalTerms/getOne', async (id='') => {
-  const res = await axios.get(`${API_BASE_URL}/api/v1/medical_terms/${id}`)
+export const getSingleMedicalTerm = createAsyncThunk('medicalTerms/getOne', async (id) => {
+  const res = await axios.get(`${BASE_URL}/medical_terms/${id}`)
   return res.data
 })
 

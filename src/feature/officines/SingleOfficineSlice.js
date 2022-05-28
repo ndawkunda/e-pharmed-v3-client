@@ -1,10 +1,10 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL
+const BASE_URL = process.env.REACT_APP_BASE_URL
 
-export const getSingleOfficine = createAsyncThunk('officines/getOne', async (id='') => {
-  const res = await axios.get(`${API_BASE_URL}/api/v1/officines/${id}`)
+export const getSingleOfficine = createAsyncThunk('officines/getOne', async (id) => {
+  const res = await axios.get(`${BASE_URL}/officines/${id}`)
   return res.data
 })
 
